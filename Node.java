@@ -7,6 +7,7 @@ package FinderBots;
  * g wird vom Algorithmus (in diesem Falle ein Roboter) in die Höhe getrieben
  */
 
+// Problem
 public class Node implements Comparable {
 
     double h = 0; // Heuristik, abgeschaetzter Wert. Hier Luftlinie
@@ -57,19 +58,7 @@ public class Node implements Comparable {
 
 
     @Override
-    public int compareTo(Object obj) {
-
-        Node node = (Node) obj;
-
-        if (this.getF() > node.getF()) {
-            return 1;
-        } else if (this.getF() < node.getF()) {
-            return -1;
-        } else {
-            return 0;
-        }
-
+    public int compareTo(Object o) {
+        return 0;  //To change body of implemented methods use File | Settings | File Templates.
     }
-
-
 }

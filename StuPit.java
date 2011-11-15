@@ -9,8 +9,11 @@ public class StuPit extends AdvancedRobot {
 
         BattlefieldMap bfm = getBattlefieldMap(); // BUG: geht nur bei Import von AdvancedRobot!!
 
-        Coordinate whereAmI = new Coordinate(getX(), getY());
-        AStarSearch mySeeker = new AStarSearch(whereAmI, bfm);
+        Coordinate whereAmI = new Coordinate(getX(), getY()); // eigene Koordinate bestimmen
+        AStarSearch mySeeker = new AStarSearch(whereAmI, bfm); // Suche Objekt initalisieren
+        mySeeker.search(whereAmI); // Suchgraphen aufbauen
+
+
 
 
 
